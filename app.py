@@ -23,7 +23,7 @@ def predict_note_authentication(Age,SibSp,Parch,Fare,Pclass):
  print(prediction)
  return prediction
 
-def predict_naive(Age,SibSp,Parch,Fare,Sex,Pclass):
+def predict_naive(Age,SibSp,Parch,Fare,Pclass):
  output= model_naive.predict(sc.transform([[Age,SibSp,Parch,Fare,Pclass]]))
  print("Passenger will die =", output)
  if output==[1]:
