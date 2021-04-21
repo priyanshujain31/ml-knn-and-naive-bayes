@@ -14,7 +14,7 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X = sc.fit_transform(X)
 def predict_note_authentication(Age ,SibSp,Parch,Fare, Pclass):
- output= model.predict(sc.transform([[Age ,SibSp,Parch,Fare, Pclass]]))
+ output= model.predict(sc.transform([[Age,SibSp,Parch,Fare,Pclass]]))
  print("Passenger will die =", output)
  if output==[1]:
    prediction="Passanger will survive"
@@ -24,7 +24,7 @@ def predict_note_authentication(Age ,SibSp,Parch,Fare, Pclass):
  return prediction
 
 def predict_naive(Age ,SibSp,Parch,Fare, Sex, Pclass):
- output= model_naive.predict(sc.transform([[Age ,SibSp,Parch,Fare, Pclass]]))
+ output= model_naive.predict(sc.transform([[Age,SibSp,Parch,Fare,Pclass]]))
  print("Passenger will die =", output)
  if output==[1]:
    prediction="Passanger will survive"
@@ -59,10 +59,10 @@ def main():
     Fare = st.number_input("Insert Fare",1,15000)
     resul=""
     if st.button("Predict"):
-      result=predict_note_authentication(Age ,SibSp,Parch,Fare, Pclass)
+      result=predict_note_authentication(Age ,SibSp,Parch,Fare,Pclass)
       st.success('Model has predicted {}'.format(result))
     if st.button("Naive Bayes Predict"):
-      result=predict_naive(Age ,SibSp,Parch,Fare, Pclass)
+      result=predict_naive(Age ,SibSp,Parch,Fare,Pclass)
       st.success('Model has predicted {}'.format(result))
       
     if st.button("About"):
