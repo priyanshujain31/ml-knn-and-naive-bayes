@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
-model = pickle.load(open('/content/drive/My Drive/Knearestneighborclassifier.pkl', 'rb'))
-model_naive = pickle.load(open('/content/drive/My Drive/naivebayesclassifier.pkl', 'rb'))
+model = pickle.load(open('Knearestneighborclassifier.pkl', 'rb'))
+model_naive = pickle.load(open('naivebayesclassifier.pkl', 'rb'))
 dataset= pd.read_csv('https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Data%20Sets/titanic.csv')
 X=dataset[["Age","SibSp","Parch","Fare","Sex","Pclass"]]
 from sklearn.preprocessing import StandardScaler
@@ -58,7 +58,7 @@ def main():
     Age = st.number_input('Insert a Age',18,60)
     SibSp = st.number_input('Insert a SibSp',0,10)
     Parch = st.number_input('Insert a Parch',1,10)
-    Pclass = st.number_input('Insert a Pclass',18,60)
+    Pclass = st.number_input('Insert a Pclass',1,4)
    
     Fare = st.number_input("Insert Fare",1,15000)
     resul=""
