@@ -15,7 +15,7 @@ sc = StandardScaler()
 X = sc.fit_transform(X)
 def predict_note_authentication(Age ,SibSp,Parch,Fare, Sex, Pclass):
  output= model.predict(sc.transform([[Age ,SibSp,Parch,Fare, Sex, Pclass]]))
-  #print("Passenger will die =", output)
+  print("Passenger will die =", output)
   if output==[1]:
     prediction="Passanger will survive"
   else:
@@ -25,7 +25,7 @@ def predict_note_authentication(Age ,SibSp,Parch,Fare, Sex, Pclass):
 
   def predict_naive(Age ,SibSp,Parch,Fare, Sex, Pclass):
  output= model_naive.predict(sc.transform([[Age ,SibSp,Parch,Fare, Sex, Pclass]]))
-  #print("Passenger will die =", output)
+  print("Passenger will die =", output)
   if output==[1]:
     prediction="Passanger will survive"
   else:
