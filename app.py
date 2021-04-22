@@ -48,7 +48,7 @@ def main():
    </div>
    """
     st.markdown(html_temp,unsafe_allow_html=True)
-    st.header("Passenger Will Survive Or Not Prediction using K nearest neighbor And Naive Bayes")
+    st.header("Passenger Survived Prediction using K nearest neighbor And Naive Bayes")
    
     
     Age = st.number_input('Insert a Age',18,60)
