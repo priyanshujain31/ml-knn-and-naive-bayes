@@ -51,7 +51,7 @@ def main():
    </div>
    """
     st.markdown(html_temp,unsafe_allow_html=True)
-    st.header("Passenger Survived Prediction using K nearest neighbor And Naive Bayes")
+    st.header("Passenger Survived Prediction using KNN And Naive Bayes")
     
   
     Sex = st.number_input('Insert sex 1 for Male 2 for Female 3 Others',1,3)
@@ -64,10 +64,10 @@ def main():
     resul=""
     if st.button("Predict"):
       result=predict_note_authentication(Age,SibSp,Parch,Fare,Sex,Pclass)
-      st.success('Model has predicted {}'.format(result))
+      st.success('KNN Model has predicted {}'.format(result))
     if st.button("Naive Bayes Predict"):
       result=predict_naive(Age,SibSp,Parch,Fare,Sex,Pclass)
-      st.success('Model has predicted {}'.format(result))
+      st.success('Naive Bayes Model has predicted {}'.format(result))
       
     if st.button("About"):
       st.subheader("Developed by Priyanshu Jain")
