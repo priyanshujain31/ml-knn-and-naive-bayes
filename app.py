@@ -54,7 +54,7 @@ def main():
     st.header("Passenger Survived Prediction using KNN And NB")
     
   
-    Sex = st.number_input('Insert sex 1 for Male 2 for Female 3 Others',1,3)
+    Sex = st.number_input('Insert 1 for Male 2 for Female 3 Others',1,3)
     Age = st.number_input('Insert a Age',18,60)
     SibSp = st.number_input('Insert a SibSp',0,10)
     Parch = st.number_input('Insert a Parch',1,10)
