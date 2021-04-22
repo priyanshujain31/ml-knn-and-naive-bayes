@@ -51,7 +51,7 @@ def main():
    </div>
    """
     st.markdown(html_temp,unsafe_allow_html=True)
-    st.header("Passenger Will Survive Or Not Prediction using K nearest neighbor And Naive Bayes")
+    st.header("Passenger Survived Prediction using K nearest neighbor And Naive Bayes")
     
   
     Sex = st.number_input('Insert sex 1 for Male 2 for Female 3 Others',1,3)
