@@ -9,7 +9,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 model = pickle.load(open('Knearestneighborclassifier.pkl', 'rb'))
 model_naive = pickle.load(open('naivebayesclassifier.pkl', 'rb'))
 dataset= pd.read_csv('https://raw.githubusercontent.com/umangkejriwal1122/Machine-Learning/master/Data%20Sets/titanic.csv')
-X=dataset[["Age","SibSp","Parch","Fare","Pclass"]].values
+X=dataset[["Age","SibSp","Parch","Fare","Pclass"]]
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X = sc.fit_transform(X)
