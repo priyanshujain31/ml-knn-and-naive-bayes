@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
-model = pickle.load(open('/content/drive/My Drive/Knearestneighborclassifier.pkl', 'rb'))
-model_naive = pickle.load(open('/content/drive/My Drive/naivebayesclassifier.pkl', 'rb'))
-dataset= pd.read_csv('/content/drive/My Drive/titanic.csv')
+model = pickle.load(open('Knearestneighborclassifier.pkl', 'rb'))
+model_naive = pickle.load(open('naivebayesclassifier.pkl', 'rb'))
+dataset= pd.read_csv('titanic.csv')
 X=dataset[["Age","SibSp","Parch","Fare","Sex","Pclass"]]
 
 from sklearn.preprocessing import LabelEncoder
@@ -54,11 +54,11 @@ def main():
     st.header("Passenger Will Survive Or Not Prediction using K nearest neighbor And Naive Bayes")
     
   
-    Sex = st.number_input('Insert sex')
+    Sex = st.number_input('Insert sex 1 for Male 2 for Female 3 Others',1,3)
     Age = st.number_input('Insert a Age',18,60)
     SibSp = st.number_input('Insert a SibSp',0,10)
     Parch = st.number_input('Insert a Parch',1,10)
-    Pclass = st.number_input('Insert a Pclass',18,60)
+    Pclass = st.number_input('Insert a Pclass',1,8)
    
     Fare = st.number_input("Insert Fare",1,15000)
     resul=""
